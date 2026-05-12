@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us - Partner. AI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+        /* Custom noise texture overlay for tech-noir feel */
+        .bg-noise {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+        }
+    </style>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "outline": "#849495",
+                "surface-container": "#1f1f1f",
+                "tertiary-fixed-dim": "#c8c6c6",
+                "on-tertiary-container": "#5f5e5e",
+                "on-secondary-fixed-variant": "#474746",
+                "inverse-surface": "#e2e2e2",
+                "on-primary": "#00363a",
+                "inverse-primary": "#006970",
+                "on-error": "#690005",
+                "primary-fixed": "#7df4ff",
+                "tertiary-fixed": "#e4e2e1",
+                "on-primary-fixed": "#002022",
+                "primary-fixed-dim": "#00dbe9",
+                "on-tertiary-fixed-variant": "#474747",
+                "inverse-on-surface": "#303030",
+                "surface-dim": "#131313",
+                "on-error-container": "#ffdad6",
+                "tertiary-container": "#dbd9d8",
+                "on-secondary": "#313030",
+                "background": "#131313",
+                "error-container": "#93000a",
+                "surface-container-lowest": "#0e0e0e",
+                "surface-container-low": "#1b1b1b",
+                "outline-variant": "#3b494b",
+                "secondary-fixed": "#e5e2e1",
+                "surface-container-highest": "#353535",
+                "on-surface-variant": "#b9cacb",
+                "surface-tint": "#00dbe9",
+                "secondary-fixed-dim": "#c8c6c5",
+                "surface-bright": "#393939",
+                "on-primary-container": "#006970",
+                "on-secondary-container": "#b7b5b4",
+                "surface-variant": "#353535",
+                "on-primary-fixed-variant": "#004f54",
+                "error": "#ffb4ab",
+                "secondary": "#c8c6c5",
+                "primary": "#dbfcff",
+                "on-secondary-fixed": "#1c1b1b",
+                "on-surface": "#e2e2e2",
+                "tertiary": "#f8f5f5",
+                "on-tertiary-fixed": "#1b1c1c",
+                "on-tertiary": "#303030",
+                "secondary-container": "#474746",
+                "primary-container": "#00f0ff",
+                "surface-container-high": "#2a2a2a",
+                "surface": "#131313",
+                "on-background": "#e2e2e2"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "margin-desktop": "32px",
+                "sm": "8px",
+                "xl": "48px",
+                "md": "16px",
+                "unit": "4px",
+                "xs": "4px",
+                "lg": "24px",
+                "margin-mobile": "16px",
+                "gutter": "16px"
+        },
+        "fontFamily": {
+                "body-sm": [
+                        "JetBrains Mono"
+                ],
+                "label-caps": [
+                        "JetBrains Mono"
+                ],
+                "code-sm": [
+                        "JetBrains Mono"
+                ],
+                "headline-lg": [
+                        "JetBrains Mono"
+                ],
+                "headline-md": [
+                        "JetBrains Mono"
+                ],
+                "body-lg": [
+                        "JetBrains Mono"
+                ]
+        },
+        "fontSize": {
+                "body-sm": [
+                        "14px",
+                        {
+                                "lineHeight": "1.5",
+                                "letterSpacing": "0em",
+                                "fontWeight": "400"
+                        }
+                ],
+                "label-caps": [
+                        "11px",
+                        {
+                                "lineHeight": "1.0",
+                                "letterSpacing": "0.1em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "code-sm": [
+                        "12px",
+                        {
+                                "lineHeight": "1.4",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "500"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "1.2",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "1.3",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-lg": [
+                        "16px",
+                        {
+                                "lineHeight": "1.6",
+                                "letterSpacing": "0em",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-primary-container selection:text-on-primary bg-noise font-body-lg">
+<!-- TopNavBar -->
+<nav class="sticky top-0 z-50 bg-background dark:bg-background border-b border-outline-variant w-full">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-[1440px] mx-auto">
+<!-- Brand -->
+<a class="font-headline-lg text-headline-lg font-black text-on-background dark:text-on-background tracking-tight" href="#">
+                Partner.
+            </a>
+<!-- Navigation Links -->
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-caps text-label-caps tracking-wider uppercase text-secondary dark:text-secondary hover:text-primary-container transition-colors duration-200" href="#">
+                    Features
+                </a>
+<a class="font-label-caps text-label-caps tracking-wider uppercase text-primary-container font-bold border-b border-primary-container pb-1 active:scale-95 transition-transform" href="#">
+                    About
+                </a>
+<a class="font-label-caps text-label-caps tracking-wider uppercase text-secondary dark:text-secondary hover:text-primary-container transition-colors duration-200" href="#">
+                    Pricing
+                </a>
+<a class="font-label-caps text-label-caps tracking-wider uppercase text-secondary dark:text-secondary hover:text-primary-container transition-colors duration-200" href="#">
+                    Contact
+                </a>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<button class="font-label-caps text-label-caps text-on-background px-6 py-3 border border-outline-variant hover:border-primary-container hover:text-primary-container transition-all duration-200 uppercase tracking-wider hidden md:block">
+                    Log In
+                </button>
+<button class="font-label-caps text-label-caps bg-on-background text-background px-6 py-3 hover:bg-primary-container hover:text-on-primary active:scale-95 transition-all duration-200 uppercase tracking-wider">
+                    Get Started
+                </button>
+</div>
+</div>
+</nav>
+<main class="w-full flex flex-col items-center">
+<!-- Hero Section -->
+<section class="w-full max-w-[1440px] mx-auto px-margin-desktop py-32 flex flex-col items-center text-center">
+<h1 class="font-headline-lg text-headline-lg md:text-[40px] leading-tight text-on-background max-w-[900px] uppercase mb-8">
+                Engineering Equity in Hiring.
+            </h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-[700px]">
+                We build high-precision artificial intelligence to arm professionals with the analytical edge required to dominate modern talent acquisition. Precision over platitudes. Data over intuition.
+            </p>
+</section>
+<!-- Vision / Asymmetry Section -->
+<section class="w-full border-t border-outline-variant">
+<div class="max-w-[1440px] mx-auto px-margin-desktop py-32 grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="col-span-1 md:col-span-5 flex flex-col gap-8">
+<span class="font-label-caps text-label-caps text-primary-container uppercase tracking-widest border-l-2 border-primary-container pl-4">The Problem</span>
+<h2 class="font-headline-lg text-headline-lg text-on-background uppercase">The Asymmetry of the Interview</h2>
+<div class="font-body-lg text-body-lg text-secondary flex flex-col gap-4">
+<p>
+                            The modern hiring process is an opaque, data-poor environment for the candidate. Institutions leverage vast data lakes, behavioral models, and algorithmic screening to assess talent, while candidates rely on scattered advice and uncalibrated intuition.
+                        </p>
+<p>
+                            Partner. was engineered to correct this structural asymmetry. We transform the interview preparation cycle from a subjective trial into a deterministic data problem.
+                        </p>
+</div>
+</div>
+<div class="col-span-1 md:col-span-6 md:col-start-7 h-[600px] bg-surface-container-low border border-surface-container-highest relative overflow-hidden group">
+<img alt="Abstract representation of structural asymmetry" class="w-full h-full object-cover opacity-60 mix-blend-luminosity group-hover:scale-105 group-hover:opacity-80 transition-all duration-700 ease-in-out" data-alt="A stark, monochromatic digital rendering of a brutalist architectural concrete structure featuring sharp, asymmetric angles and harsh shadows. The lighting is high-contrast, casting deep blacks against bright, textured grays. The composition is unbalanced yet meticulously engineered, representing systemic inequality and structural barriers. The aesthetic is cold, analytical, and firmly rooted in a premium tech-noir visual language." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3Bk5EUW3SuuLaqRXogZZ63wM9MbSykXyGqNnabT8V7gVJEmYDtt993lN85c6HcqaLLoQmxRO7EN0PZcdp7NNN5js6SuijGv6ODBAF20KFZYAO8EG-nm0aZdiFO0vnuE8Iub2aSZz6UuRpgjHVDHOX_G9jsIJ0UB75n6Fxkzl9nklQAdT3DBBbVCwvhaG6WWSoRT-b2hBt6lkltHwdYL_GdJyI2B66sjdzpspdMlM6RRmbBIcPZL4XKyyd0H2ZrgCzB04GL3k82Qs"/>
+<div class="absolute inset-0 border border-primary-container/10 pointer-events-none"></div>
+</div>
+</div>
+</section>
+<!-- Technology Section (Bento Grid) -->
+<section class="w-full bg-surface-container-lowest border-t border-outline-variant">
+<div class="max-w-[1440px] mx-auto px-margin-desktop py-32 flex flex-col gap-20">
+<div class="flex flex-col gap-unit">
+<span class="font-label-caps text-label-caps text-primary-container uppercase tracking-widest">Our Technology</span>
+<h2 class="font-headline-lg text-headline-lg text-on-background uppercase">Specialized HR Logic Models</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 01 -->
+<div class="bg-surface-container-low border border-surface-container-highest p-8 flex flex-col gap-4 hover:border-outline transition-colors duration-300 relative group">
+<div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-primary-container/0 via-primary-container/50 to-primary-container/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<span class="font-code-sm text-code-sm text-surface-variant">01</span>
+<h3 class="font-headline-md text-headline-md text-on-background uppercase">Contextual Parsing</h3>
+<p class="font-body-sm text-body-sm text-secondary">
+                            Our proprietary models don't just generate generic text; they parse the underlying structural logic of Fortune 500 interview frameworks. They understand intent, behavioral constraints, and the unwritten rubrics of corporate evaluation.
+                        </p>
+</div>
+<!-- Card 02 -->
+<div class="bg-surface-container-low border border-surface-container-highest p-8 flex flex-col gap-4 hover:border-outline transition-colors duration-300 relative group">
+<div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-primary-container/0 via-primary-container/50 to-primary-container/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<span class="font-code-sm text-code-sm text-surface-variant">02</span>
+<h3 class="font-headline-md text-headline-md text-on-background uppercase">Deterministic Critique</h3>
+<p class="font-body-sm text-body-sm text-secondary">
+                            Vague advice is useless in high-stakes environments. Our system provides surgical, line-by-line critiques of candidate responses, rapidly identifying logical fallacies, missing data points, and narrative weaknesses.
+                        </p>
+</div>
+<!-- Card 03 -->
+<div class="bg-surface-container-low border border-surface-container-highest p-8 flex flex-col gap-4 hover:border-outline transition-colors duration-300 relative group">
+<div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-primary-container/0 via-primary-container/50 to-primary-container/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<span class="font-code-sm text-code-sm text-surface-variant">03</span>
+<h3 class="font-headline-md text-headline-md text-on-background uppercase">Adversarial Testing</h3>
+<p class="font-body-sm text-body-sm text-secondary">
+                            Preparation requires friction. The AI dynamic simulates hostile, high-pressure interview environments, aggressively challenging premises and probing weaknesses to build cognitive resilience before the actual event.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Visual / Ethos Section -->
+<section class="w-full border-t border-outline-variant">
+<div class="max-w-[1440px] mx-auto px-margin-desktop py-32 flex flex-col md:flex-row items-center gap-20">
+<div class="w-full md:w-1/2 relative h-[500px]">
+<!-- Placeholder for Monochrome Data Viz -->
+<div class="absolute inset-0 bg-surface-container-low border border-surface-container-highest flex items-center justify-center overflow-hidden">
+<img alt="Monochrome Data Visualization" class="w-full h-full object-cover mix-blend-luminosity opacity-70" data-alt="A high-resolution, monochrome data visualization dashboard displayed on a dark screen. The charts feature varying weights of stark white lines, sharp geometric angles, and stippled dot patterns instead of colors, representing complex performance metrics. The background is pure black, creating a high-contrast, clinical, and authoritative tech-noir aesthetic. The overall impression is one of extreme precision and analytical power." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1nLGcHrG0ZuVibQ5oAj7vHUo5_2AhRPomiktG8ohj4m26cq3-6lfBycJnZ7R0098yG3YoDhTtzkVsk2Ry9ZEl6cPwiP76_VQfrJGF8bQAjExpR6JjPfLJC7jWQv4EYcYZpbfIWSfMvB6XtF8bQFRWNyIuzdA4MEs7eVr8abfegjCQwspb4v2WBsf24ueehdkBheiKs-M_XcM0USzamA6gqBRELCggZcZsYWXsxFRSjGnh3RDujS4jiEHfnClgm5blzBA9WCd3mHs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent pointer-events-none"></div>
+</div>
+</div>
+<div class="w-full md:w-1/2 flex flex-col gap-8 pl-0 md:pl-20 border-l-0 md:border-l border-outline-variant">
+<span class="font-label-caps text-label-caps text-background uppercase tracking-widest bg-primary-container px-2 py-1 self-start">The Ethos</span>
+<h2 class="font-headline-lg text-headline-lg text-on-background uppercase">No Fluff. Just Signal.</h2>
+<p class="font-body-lg text-body-lg text-secondary">
+                        We reject the conventional approach to career coaching—a landscape saturated with vague motivational rhetoric and generic templates. We are a team of engineers, data scientists, and former corporate evaluators who believe that performance can be optimized through rigorous, quantitative analysis. We built Partner. to be the ultimate uncompromising tool for those who demand an absolute advantage.
+                    </p>
+<div class="mt-8 flex gap-8">
+<div class="flex flex-col">
+<span class="font-headline-lg text-headline-lg text-primary-container">10x</span>
+<span class="font-label-caps text-label-caps text-secondary uppercase">Analysis Depth</span>
+</div>
+<div class="w-[1px] bg-outline-variant"></div>
+<div class="flex flex-col">
+<span class="font-headline-lg text-headline-lg text-primary-container">0%</span>
+<span class="font-label-caps text-label-caps text-secondary uppercase">Subjectivity</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-outline-variant bg-background dark:bg-background mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-20 py-20 px-margin-desktop max-w-[1440px] mx-auto">
+<!-- Brand Column -->
+<div class="col-span-1 flex flex-col gap-4">
+<span class="font-headline-md text-headline-md font-bold text-on-background dark:text-on-background uppercase tracking-tight">Partner.</span>
+<p class="font-label-caps text-label-caps text-secondary mt-unit">SYSTEM OF RECORD FOR TALENT EVALUATION.</p>
+</div>
+<!-- Links Columns (Distributed) -->
+<div class="col-span-1 md:col-span-3 grid grid-cols-2 md:grid-cols-3 gap-8">
+<div class="flex flex-col gap-4">
+<a class="font-body-sm text-body-sm text-secondary dark:text-secondary hover:text-primary-container transition-colors" href="#">Features</a>
+<a class="font-body-sm text-body-sm text-secondary dark:text-secondary hover:text-primary-container transition-colors" href="#">Pricing</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="font-body-sm text-body-sm text-secondary dark:text-secondary hover:text-primary-container transition-colors" href="#">About</a>
+<a class="font-body-sm text-body-sm text-secondary dark:text-secondary hover:text-primary-container transition-colors" href="#">Contact Us</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="font-body-sm text-body-sm text-secondary dark:text-secondary hover:text-primary-container transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-sm text-body-sm text-secondary dark:text-secondary hover:text-primary-container transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+<!-- Copyright -->
+<div class="col-span-1 md:col-span-4 mt-8 pt-8 border-t border-surface-container-highest">
+<p class="font-label-caps text-label-caps text-secondary">
+                    © 2026 PARTNER. ALL RIGHTS RESERVED.
+                </p>
+</div>
+</div>
+</footer>
+</body></html>

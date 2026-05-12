@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact - Partner.</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "outline": "#849495",
+                "surface-container": "#1f1f1f",
+                "tertiary-fixed-dim": "#c8c6c6",
+                "on-tertiary-container": "#5f5e5e",
+                "on-secondary-fixed-variant": "#474746",
+                "inverse-surface": "#e2e2e2",
+                "on-primary": "#00363a",
+                "inverse-primary": "#006970",
+                "on-error": "#690005",
+                "primary-fixed": "#7df4ff",
+                "tertiary-fixed": "#e4e2e1",
+                "on-primary-fixed": "#002022",
+                "primary-fixed-dim": "#00dbe9",
+                "on-tertiary-fixed-variant": "#474747",
+                "inverse-on-surface": "#303030",
+                "surface-dim": "#131313",
+                "on-error-container": "#ffdad6",
+                "tertiary-container": "#dbd9d8",
+                "on-secondary": "#313030",
+                "background": "#131313",
+                "error-container": "#93000a",
+                "surface-container-lowest": "#0e0e0e",
+                "surface-container-low": "#1b1b1b",
+                "outline-variant": "#3b494b",
+                "secondary-fixed": "#e5e2e1",
+                "surface-container-highest": "#353535",
+                "on-surface-variant": "#b9cacb",
+                "surface-tint": "#00dbe9",
+                "secondary-fixed-dim": "#c8c6c5",
+                "surface-bright": "#393939",
+                "on-primary-container": "#006970",
+                "on-secondary-container": "#b7b5b4",
+                "surface-variant": "#353535",
+                "on-primary-fixed-variant": "#004f54",
+                "error": "#ffb4ab",
+                "secondary": "#c8c6c5",
+                "primary": "#dbfcff",
+                "on-secondary-fixed": "#1c1b1b",
+                "on-surface": "#e2e2e2",
+                "tertiary": "#f8f5f5",
+                "on-tertiary-fixed": "#1b1c1c",
+                "on-tertiary": "#303030",
+                "secondary-container": "#474746",
+                "primary-container": "#00f0ff",
+                "surface-container-high": "#2a2a2a",
+                "surface": "#131313",
+                "on-background": "#e2e2e2"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "margin-desktop": "32px",
+                "sm": "8px",
+                "xl": "48px",
+                "md": "16px",
+                "unit": "4px",
+                "xs": "4px",
+                "lg": "24px",
+                "margin-mobile": "16px",
+                "gutter": "16px"
+        },
+        "fontFamily": {
+                "body-sm": [
+                        "JetBrains Mono"
+                ],
+                "label-caps": [
+                        "JetBrains Mono"
+                ],
+                "code-sm": [
+                        "JetBrains Mono"
+                ],
+                "headline-lg": [
+                        "JetBrains Mono"
+                ],
+                "headline-md": [
+                        "JetBrains Mono"
+                ],
+                "body-lg": [
+                        "JetBrains Mono"
+                ]
+        },
+        "fontSize": {
+                "body-sm": [
+                        "14px",
+                        {
+                                "lineHeight": "1.5",
+                                "letterSpacing": "0em",
+                                "fontWeight": "400"
+                        }
+                ],
+                "label-caps": [
+                        "11px",
+                        {
+                                "lineHeight": "1.0",
+                                "letterSpacing": "0.1em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "code-sm": [
+                        "12px",
+                        {
+                                "lineHeight": "1.4",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "500"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "1.2",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "1.3",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-lg": [
+                        "16px",
+                        {
+                                "lineHeight": "1.6",
+                                "letterSpacing": "0em",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e2e2e2;
+        }
+      </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-lg selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar Component -->
+<nav class="bg-background dark:bg-background text-primary dark:text-primary font-body-lg text-body-lg tracking-wider uppercase docked full-width top-0 border-b border-outline-variant flat no shadows z-50 sticky">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto w-full">
+<a class="font-headline-lg text-headline-lg font-black text-primary dark:text-primary tracking-tighter" href="#">Partner.</a>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="text-secondary dark:text-secondary hover:text-primary transition-colors duration-200" href="#">Features</a>
+<a class="text-secondary dark:text-secondary hover:text-primary transition-colors duration-200" href="#">About</a>
+<a class="text-secondary dark:text-secondary hover:text-primary transition-colors duration-200" href="#">Pricing</a>
+<a class="text-primary font-bold border-b border-primary pb-1 hover:text-primary transition-colors duration-200" href="#">Contact</a>
+</div>
+<div class="hidden md:flex items-center gap-4">
+<a class="font-label-caps text-label-caps text-primary hover:opacity-80 transition-opacity uppercase" href="#">Log In</a>
+<a class="font-label-caps text-label-caps bg-primary text-on-primary px-6 py-3 hover:opacity-90 transition-opacity uppercase" href="#">Get Started</a>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-16 flex flex-col gap-16">
+<!-- Contact Header -->
+<header class="max-w-3xl flex flex-col gap-8">
+<h1 class="font-headline-lg text-headline-lg text-primary">Initiate Contact.</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl">
+                Direct inquiries to our central command. We prioritize data-driven communication. Expect a response within one business cycle.
+            </p>
+</header>
+<!-- Contact Grid -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Information Column -->
+<div class="lg:col-span-4 flex flex-col gap-8">
+<!-- Support Info -->
+<div class="bg-surface p-8 border border-outline-variant flex flex-col gap-8 relative group">
+<span class="font-label-caps text-label-caps text-outline absolute top-4 left-4">01</span>
+<div class="mt-8 flex flex-col gap-4">
+<div class="flex items-center gap-2 text-[#00f0ff]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">mail</span>
+<h3 class="font-headline-md text-headline-md text-primary">Direct Line</h3>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">
+                            For technical support and operational inquiries, transmit to our primary inbox.
+                        </p>
+<a class="font-label-caps text-label-caps text-primary hover:text-secondary transition-colors underline decoration-outline-variant underline-offset-4 pt-unit uppercase" href="mailto:support@partner.inc">support@partner.inc</a>
+</div>
+</div>
+<!-- Global Office -->
+<div class="bg-surface p-8 border border-outline-variant flex flex-col gap-8 relative group">
+<span class="font-label-caps text-label-caps text-outline absolute top-4 left-4">02</span>
+<div class="mt-8 flex flex-col gap-4">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">location_on</span>
+<h3 class="font-headline-md text-headline-md">Headquarters</h3>
+</div>
+<address class="font-body-sm text-body-sm text-secondary not-italic">
+                            Level 42, Tech Noir Tower<br/>
+                            Sector 7G, Neo Grid<br/>
+                            100100
+                        </address>
+</div>
+</div>
+<!-- Social Links -->
+<div class="flex gap-4 pt-4 border-t border-outline-variant">
+<a aria-label="X (Twitter)" class="text-secondary hover:text-primary transition-colors flex items-center gap-unit" href="#">
+<span class="font-label-caps text-label-caps uppercase">X.COM</span>
+</a>
+<span class="text-outline-variant">/</span>
+<a aria-label="LinkedIn" class="text-secondary hover:text-primary transition-colors flex items-center gap-unit" href="#">
+<span class="font-label-caps text-label-caps uppercase">LINKEDIN</span>
+</a>
+<span class="text-outline-variant">/</span>
+<a aria-label="GitHub" class="text-secondary hover:text-primary transition-colors flex items-center gap-unit" href="#">
+<span class="font-label-caps text-label-caps uppercase">GITHUB</span>
+</a>
+</div>
+</div>
+<!-- Form Column -->
+<div class="lg:col-span-8">
+<div class="bg-surface p-8 md:p-12 border border-outline-variant relative">
+<div class="absolute top-0 right-0 p-4 border-l border-b border-outline-variant bg-surface-container">
+<span class="material-symbols-outlined text-outline" style="font-variation-settings: 'FILL' 0;">terminal</span>
+</div>
+<form action="#" class="flex flex-col gap-8 mt-4" method="POST">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Name Input -->
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-secondary uppercase tracking-widest" for="name">Identification</label>
+<input class="bg-surface border border-outline-variant text-primary p-4 focus:ring-0 focus:border-[#00f0ff] transition-colors outline-none font-body-sm" id="name" name="name" placeholder="Jane Doe" required="" type="text"/>
+</div>
+<!-- Email Input -->
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-secondary uppercase tracking-widest" for="email">Return Vector (Email)</label>
+<input class="bg-surface border border-outline-variant text-primary p-4 focus:ring-0 focus:border-[#00f0ff] transition-colors outline-none font-body-sm" id="email" name="email" placeholder="jane@domain.com" required="" type="email"/>
+</div>
+</div>
+<!-- Inquiry Type -->
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-secondary uppercase tracking-widest" for="subject">Classification</label>
+<div class="relative">
+<select class="bg-surface border border-outline-variant text-primary p-4 focus:ring-0 focus:border-[#00f0ff] transition-colors outline-none font-body-sm w-full appearance-none cursor-pointer" id="subject" name="subject">
+<option value="general">General Transmission</option>
+<option value="support">Technical Support</option>
+<option value="sales">Enterprise Acquisition</option>
+<option value="press">Media Relations</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-primary">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Message Input -->
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps text-secondary uppercase tracking-widest" for="message">Payload (Message)</label>
+<textarea class="bg-surface border border-outline-variant text-primary p-4 focus:ring-0 focus:border-[#00f0ff] transition-colors outline-none font-body-sm resize-y" id="message" name="message" placeholder="Enter data transmission here..." required="" rows="6"></textarea>
+</div>
+<!-- Submit Button -->
+<div class="pt-4 flex justify-end">
+<button class="bg-[#00f0ff] text-[#00363a] font-label-caps text-label-caps uppercase px-8 py-4 hover:bg-opacity-90 transition-opacity flex items-center gap-2 group" type="submit">
+                                TRANSMIT DATA
+                                <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="bg-background dark:bg-background text-primary dark:text-primary font-body-sm text-body-sm w-full border-t border-outline-variant flat no shadows mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 py-16 px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+<!-- Brand -->
+<div class="flex flex-col gap-4">
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary tracking-tighter">Partner.</span>
+<p class="text-secondary text-sm max-w-xs">Engineered for precision. Built for the future.</p>
+</div>
+<!-- Links -->
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-outline mb-2">Platform</span>
+<a class="text-secondary dark:text-secondary hover:text-primary transition-colors" href="#">Features</a>
+<a class="text-secondary dark:text-secondary hover:text-primary transition-colors" href="#">Pricing</a>
+<a class="text-secondary dark:text-secondary hover:text-primary transition-colors" href="#">About</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-outline mb-2">Legal</span>
+<a class="text-primary hover:text-primary transition-colors" href="#">Contact Us</a>
+<a class="text-secondary dark:text-secondary hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-secondary dark:text-secondary hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+<!-- Copyright -->
+<div class="flex flex-col justify-end md:items-end col-span-1 md:col-span-1">
+<p class="font-label-caps text-label-caps text-secondary uppercase">© 2026 PARTNER. ALL RIGHTS RESERVED.</p>
+</div>
+</div>
+</footer>
+</body></html>

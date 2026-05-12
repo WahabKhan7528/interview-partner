@@ -1,26 +1,57 @@
 import { createBrowserRouter } from "react-router";
-import Login from "./features/auth/pages/Login";
-import Register from "./features/auth/pages/Register";
-import Protected from "./features/auth/components/Protected";
-import Home from "./features/interview/pages/Home";
-import Interview from "./features/interview/pages/Interview";
-
+import Layout from "./components/Layout";
+import Landing from "./pages/public/Landing";
+import Features from "./pages/public/Features";
+import About from "./pages/public/About";
+import Pricing from "./pages/public/Pricing";
+import Contact from "./pages/public/Contact";
+import Login from "./pages/auth/Login";
+import Register from "./pages/auth/Register";
+import Protected from "./pages/auth/Protected";
+import Dashboard from "./pages/protected/Dashboard";
+import InterviewPrep from "./pages/protected/InterviewPrep";
 
 export const router = createBrowserRouter([
     {
-        path: "/login",
-        element: <Login />
-    },
-    {
-        path: "/register",
-        element: <Register />
-    },
-    {
         path: "/",
-        element: <Protected><Home /></Protected>
-    },
-    {
-        path:"/interview/:interviewId",
-        element: <Protected><Interview /></Protected>
+        element: <Layout />,
+        children: [
+            {
+                index: true,
+                element: <Landing />
+            },
+            {
+                path: "features",
+                element: <Features />
+            },
+            {
+                path: "about",
+                element: <About />
+            },
+            {
+                path: "pricing",
+                element: <Pricing />
+            },
+            {
+                path: "contact",
+                element: <Contact />
+            },
+            {
+                path: "login",
+                element: <Login />
+            },
+            {
+                path: "register",
+                element: <Register />
+            },
+            {
+                path: "dashboard",
+                element: <Protected><Dashboard /></Protected>
+            },
+            {
+                path: "interview/:interviewId",
+                element: <Protected><InterviewPrep /></Protected>
+            }
+        ]
     }
 ])
