@@ -14,9 +14,9 @@ export const Button = ({
 
   const variants = {
     primary:
-      "bg-primary-container text-black border border-primary-container px-6 py-3 hover:-translate-y-0.5 hover:shadow-[0_12px_36px_rgba(0,240,255,0.35)]",
+      "bg-primary-container text-black border border-primary-container px-6 py-3 hover:scale-[1.01] hover:bg-white",
     secondary:
-      "bg-black/35 border border-white/25 text-white px-6 py-3 hover:bg-white/8 backdrop-blur-sm",
+      "bg-black/35 border border-white/25 text-white px-6 py-3 hover:bg-white/8",
     ghost:
       "bg-transparent border border-transparent text-white px-4 py-2 hover:border-white/20 hover:bg-white/5",
   };

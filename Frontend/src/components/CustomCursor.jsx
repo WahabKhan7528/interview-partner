@@ -1,60 +1,72 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
+import { motion, useMotionValue, useSpring } from 'framer-motion'
 
 const CustomCursor = () => {
-    const [position, setPosition] = useState({ x: 0, y: 0 })
-    const [isHovering, setIsHovering] = useState(false)
+    const mouseX = useMotionValue(0)
+    const mouseY = useMotionValue(0)
+    const frameIdRef = useRef(null)
+    const lastUpdateRef = useRef({ x: 0, y: 0 })
+
+    // Optimized spring config - reduced damping for fewer updates
+    const springConfig = { damping: 35, stiffness: 120, mass: 0.6, restDelta: 0.01 }
+    const springX = useSpring(mouseX, springConfig)
+    const springY = useSpring(mouseY, springConfig)
 
     useEffect(() => {
-        const updatePosition = (e) => {
-            setPosition({ x: e.clientX, y: e.clientY })
+        let isMoving = false
+
+        const handleMouseMove = (e) => {
+            // Throttle updates to every 16ms (60fps) using requestAnimationFrame
+            if (isMoving) return
+            
+            isMoving = true
+            frameIdRef.current = requestAnimationFrame(() => {
+                const dx = e.clientX - lastUpdateRef.current.x
+                const dy = e.clientY - lastUpdateRef.current.y
+                
+                // Only update if mouse moved more than 2px (dead zone)
+                if (Math.abs(dx) > 2 || Math.abs(dy) > 2) {
+                    mouseX.set(e.clientX)
+                    mouseY.set(e.clientY)
+                    lastUpdateRef.current = { x: e.clientX, y: e.clientY }
+                }
+                isMoving = false
+            })
         }
 
-        const handleMouseOver = (e) => {
-            if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON' || e.target.closest('a') || e.target.closest('button')) {
-                setIsHovering(true)
-            } else {
-                setIsHovering(false)
-            }
-        }
-
-        window.addEventListener('mousemove', updatePosition)
-        window.addEventListener('mouseover', handleMouseOver)
-
+        window.addEventListener('mousemove', handleMouseMove, { passive: true })
+        
         return () => {
-            window.removeEventListener('mousemove', updatePosition)
-            window.removeEventListener('mouseover', handleMouseOver)
+            window.removeEventListener('mousemove', handleMouseMove)
+            if (frameIdRef.current) cancelAnimationFrame(frameIdRef.current)
         }
-    }, [])
+    }, [mouseX, mouseY])
 
     return (
         <>
-            {/* Main Cursor Dot */}
-            <div 
-                className="fixed top-0 left-0 w-2 h-2 bg-primary-container rounded-full pointer-events-none z-[9999] mix-blend-difference"
+            {/* Main Cursor Dot - Minimal and performant */}
+            <motion.div 
+                className="fixed top-0 left-0 w-2 h-2 bg-primary-container rounded-full pointer-events-none z-[9999]"
                 style={{ 
-                    transform: `translate3d(${position.x}px, ${position.y}px, 0)`,
-                    transition: 'transform 0.1s ease-out'
+                    x: springX, 
+                    y: springY,
+                    translateX: '-50%',
+                    translateY: '-50%',
+                    willChange: 'transform'
                 }}
             />
-            {/* Blurry Glow / Filter Effect */}
-            <div 
-                className={`fixed top-0 left-0 w-40 h-40 rounded-full pointer-events-none z-[9998] blur-[40px] transition-all duration-300 ease-out ${isHovering ? 'bg-primary-container/30 scale-150' : 'bg-primary-container/10'}`}
+            {/* Removed heavy blur effect - replaced with subtle glow via box-shadow for better perf */}
+            <motion.div 
+                className="fixed top-0 left-0 w-16 h-16 rounded-full pointer-events-none z-[9998]"
                 style={{ 
-                    transform: `translate3d(${position.x - 80}px, ${position.y - 80}px, 0)`,
-                    transition: 'transform 0.2s ease-out, background-color 0.3s, scale 0.3s'
+                    x: springX, 
+                    y: springY,
+                    translateX: '-50%',
+                    translateY: '-50%',
+                    willChange: 'transform',
+                    boxShadow: '0 0 20px rgba(125, 211, 252, 0.2), 0 0 40px rgba(125, 211, 252, 0.1)'
                 }}
             />
-            {/* Literal Blur Spotlight (Satisfies the "blurry effect when I hover" request) */}
-            <div 
-                className="fixed top-0 left-0 w-24 h-24 rounded-full pointer-events-none z-[9997] backdrop-blur-[4px] border border-white/10 flex items-center justify-center overflow-hidden shadow-[inset_0_0_20px_rgba(255,255,255,0.05)]"
-                style={{ 
-                    transform: `translate3d(${position.x - 48}px, ${position.y - 48}px, 0)`,
-                    transition: 'transform 0.1s ease-out'
-                }}
-            >
-                {/* Subtle scanning line inside the blur circle */}
-                <div className="w-full h-[1px] bg-primary-container/20 absolute top-0 animate-[scan_2s_linear_infinite]"></div>
-            </div>
         </>
     )
 }
