@@ -37,7 +37,7 @@ const Header = () => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
       className="fixed top-0 w-full z-100 border-b border-white/10 bg-background/80"
-      style={{ willChange: 'transform' }}
+      style={{ willChange: "transform" }}
     >
       <div className="max-w-360 mx-auto px-4 md:px-8 py-4 flex items-center justify-between gap-4 relative">
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary-container/20 to-transparent"></div>
@@ -48,7 +48,7 @@ const Header = () => {
             className="text-2xl md:text-[1.75rem] font-bold tracking-tight font-mono text-white flex items-center leading-none"
           >
             Partner
-            <motion.span 
+            <motion.span
               className="text-primary-container"
               animate={{ opacity: [1, 0, 1] }}
               transition={{ duration: 1, repeat: Infinity }}
@@ -60,10 +60,7 @@ const Header = () => {
 
         <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-[11px] font-medium text-secondary font-mono tracking-[0.14em] uppercase">
           {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              to={link.path}
-            >
+            <Link key={link.name} to={link.path}>
               <motion.div
                 className={`border-b transition-colors duration-300 ${isActive(link.path) ? "text-primary-container border-primary-container" : "border-transparent text-secondary hover:text-white"}`}
                 whileHover={{ y: -2 }}
@@ -81,7 +78,10 @@ const Header = () => {
               <Link to="/login">
                 <motion.div
                   className="text-[11px] md:text-xs font-bold text-white px-3 md:px-4 py-2 border border-white/25 bg-black/30 font-mono uppercase tracking-[0.16em]"
-                  whileHover={{ backgroundColor: "rgba(255,255,255,0.08)", borderColor: "rgba(255,255,255,0.4)" }}
+                  whileHover={{
+                    backgroundColor: "rgba(255,255,255,0.08)",
+                    borderColor: "rgba(255,255,255,0.4)",
+                  }}
                   whileTap={{ scale: 0.98 }}
                 >
                   Log In
@@ -92,7 +92,7 @@ const Header = () => {
                   className="text-[11px] md:text-xs font-bold bg-primary-container text-black px-3 md:px-4 py-2 border border-primary-container font-mono uppercase tracking-[0.16em]"
                   whileHover={{ scale: 1.01, backgroundColor: "#ffffff" }}
                   whileTap={{ scale: 0.98 }}
-                  style={{ willChange: 'transform' }}
+                  style={{ willChange: "transform" }}
                 >
                   Get Started
                 </motion.div>
@@ -111,7 +111,10 @@ const Header = () => {
               <motion.button
                 onClick={onLogout}
                 className="text-[11px] md:text-xs font-bold text-white px-3 md:px-4 py-2 border border-white/25 bg-black/30 font-mono uppercase tracking-[0.16em]"
-                whileHover={{ backgroundColor: "rgba(255,255,255,0.08)", borderColor: "rgba(255,255,255,0.4)" }}
+                whileHover={{
+                  backgroundColor: "rgba(255,255,255,0.08)",
+                  borderColor: "rgba(255,255,255,0.4)",
+                }}
                 whileTap={{ scale: 0.98 }}
               >
                 Log Out
@@ -131,18 +134,15 @@ const Header = () => {
 
       <AnimatePresence>
         {mobileOpen && (
-          <motion.div 
+          <motion.div
             initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
+            animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             className="md:hidden border-t border-white/10 bg-surface-container-low/95 px-4 py-4 overflow-hidden"
           >
             <nav className="flex flex-col gap-2 mb-4">
               {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  to={link.path}
-                >
+                <Link key={link.name} to={link.path}>
                   <motion.div
                     className={`px-3 py-2 border text-xs font-mono uppercase tracking-[0.16em] ${isActive(link.path) ? "text-primary-container border-primary-container/40 bg-black/35" : "text-secondary border-white/15 bg-black/20"}`}
                     whileTap={{ scale: 0.98 }}

@@ -13,9 +13,9 @@ const Landing = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.15,
-        delayChildren: 0.2
-      }
-    }
+        delayChildren: 0.2,
+      },
+    },
   };
 
   const itemVariants = {
@@ -23,8 +23,8 @@ const Landing = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] }
-    }
+      transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] },
+    },
   };
 
   const cardVariants = {
@@ -32,8 +32,8 @@ const Landing = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" }
-    }
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
   };
 
   return (
@@ -42,7 +42,7 @@ const Landing = () => {
       <section
         ref={heroRef}
         className="relative min-h-screen flex items-center px-margin-mobile md:px-margin-desktop pt-36 pb-20 md:pb-28 overflow-hidden border-b border-outline-variant/30"
-        style={{ contain: 'layout style paint' }}
+        style={{ contain: "layout style paint" }}
       >
         <HeroCursor containerRef={heroRef} />
 
@@ -55,29 +55,32 @@ const Landing = () => {
         <div className="absolute -bottom-24 left-[40%] w-90 h-55 rounded-full bg-primary-container/8 blur-[80px] opacity-40"></div>
 
         <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
-          <div className="absolute top-0 left-[14%] w-px h-full bg-gradient-to-b from-transparent via-primary-container/35 to-transparent animate-pulse-slow" style={{ willChange: 'opacity' }}></div>
+          <div
+            className="absolute top-0 left-[14%] w-px h-full bg-gradient-to-b from-transparent via-primary-container/35 to-transparent animate-pulse-slow"
+            style={{ willChange: "opacity" }}
+          ></div>
           <div
             className="absolute top-0 right-[18%] w-px h-full bg-gradient-to-b from-transparent via-white/20 to-transparent animate-pulse-slow"
-            style={{ animationDelay: "1.6s", willChange: 'opacity' }}
+            style={{ animationDelay: "1.6s", willChange: "opacity" }}
           ></div>
         </div>
 
-        <motion.div 
+        <motion.div
           className="max-w-360 mx-auto w-full relative z-10 flex flex-col items-center text-center"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          style={{ willChange: 'opacity' }}
+          style={{ willChange: "opacity" }}
         >
           <div className="max-w-5xl flex flex-col items-center">
-            <motion.h1 
+            <motion.h1
               className="font-mono font-bold text-white tracking-[-0.05em] uppercase leading-[0.75]"
               variants={itemVariants}
             >
               <span className="block text-[32px] sm:text-[56px] md:text-[72px] lg:text-[88px] opacity-25 mb-4">
                 Walk Into Interviews
               </span>
-              <motion.span 
+              <motion.span
                 className="block text-[52px] sm:text-[92px] md:text-[130px] lg:text-[160px] xl:text-[190px] text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/10 drop-shadow-[0_0_40px_rgba(125,211,252,0.25)]"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -87,27 +90,28 @@ const Landing = () => {
               </motion.span>
             </motion.h1>
 
-            <motion.p 
+            <motion.p
               className="mt-12 max-w-2xl text-secondary text-base md:text-xl leading-relaxed font-light border-x border-white/5 px-12"
               variants={itemVariants}
             >
               Partner transforms your resume and job requirements into a
-              <span className="text-white mx-1.5">precision prep battle plan</span>
-              with likely questions, calibrated answers, and a strategic study timeline.
+              <span className="text-white mx-1.5">
+                precision prep battle plan
+              </span>
+              with likely questions, calibrated answers, and a strategic study
+              timeline.
             </motion.p>
 
-            <motion.div 
+            <motion.div
               className="mt-12 flex flex-col sm:flex-row gap-4 md:gap-5 w-full sm:w-auto justify-center"
               variants={itemVariants}
             >
-              <Link
-                to="/register"
-              >
+              <Link to="/register">
                 <motion.div
                   className="group relative inline-flex items-center justify-center bg-primary-container text-black font-mono font-bold px-8 md:px-10 py-4 md:py-5 uppercase tracking-[0.18em] text-[11px] border border-primary-container"
                   whileHover={{ scale: 1.01, y: -2 }}
                   whileTap={{ scale: 0.99 }}
-                  style={{ willChange: 'transform' }}
+                  style={{ willChange: "transform" }}
                 >
                   Start Free Prep
                   <motion.svg
@@ -117,16 +121,24 @@ const Landing = () => {
                     viewBox="0 0 24 24"
                     whileHover={{ x: 3 }}
                   >
-                    <path d="M13 10V3L4 14h7v7l9-11h-7z" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path>
+                    <path
+                      d="M13 10V3L4 14h7v7l9-11h-7z"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                    ></path>
                   </motion.svg>
                 </motion.div>
               </Link>
               <motion.a
                 href="#how-it-works"
                 className="inline-flex items-center justify-center border border-white/20 bg-black/40 text-white font-mono font-bold px-8 md:px-10 py-4 md:py-5 uppercase tracking-[0.18em] text-[11px]"
-                whileHover={{ backgroundColor: "rgba(255,255,255,0.08)", borderColor: "rgba(255,255,255,0.4)" }}
+                whileHover={{
+                  backgroundColor: "rgba(255,255,255,0.08)",
+                  borderColor: "rgba(255,255,255,0.4)",
+                }}
                 whileTap={{ scale: 0.99 }}
-                style={{ willChange: 'transform' }}
+                style={{ willChange: "transform" }}
               >
                 See How It Works
               </motion.a>
@@ -141,7 +153,7 @@ const Landing = () => {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-360 h-px bg-gradient-to-r from-transparent via-primary-container/20 to-transparent"></div>
 
         <div className="max-w-360 mx-auto relative z-10">
-          <motion.div 
+          <motion.div
             className="flex flex-col lg:flex-row lg:items-end justify-between mb-20 gap-8"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -170,13 +182,13 @@ const Landing = () => {
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-3 gap-1"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={{
-              visible: { transition: { staggerChildren: 0.2 } }
+              visible: { transition: { staggerChildren: 0.2 } },
             }}
           >
             {[
@@ -205,7 +217,7 @@ const Landing = () => {
                 variants={cardVariants}
                 whileHover={{ backgroundColor: "rgba(255,255,255,0.05)" }}
               >
-                <motion.div 
+                <motion.div
                   className="absolute top-0 left-0 w-8 h-px bg-white/10 group-hover:bg-primary-container/40"
                   whileHover={{ backgroundColor: "rgba(125,211,252,0.4)" }}
                 ></motion.div>
@@ -227,7 +239,7 @@ const Landing = () => {
                   {item.desc}
                 </p>
 
-                <motion.div 
+                <motion.div
                   className="mt-8 h-px bg-primary-container/30 origin-left"
                   initial={{ scaleX: 0 }}
                   whileInView={{ scaleX: 1 }}
@@ -245,7 +257,7 @@ const Landing = () => {
         <div className="absolute inset-0 tech-grid opacity-5"></div>
 
         <div className="max-w-360 mx-auto px-margin-mobile md:px-margin-desktop relative z-10 mb-20">
-          <motion.div 
+          <motion.div
             className="flex flex-col md:flex-row md:items-end justify-between gap-8"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -266,7 +278,8 @@ const Landing = () => {
             </div>
             <div className="md:text-right">
               <p className="text-secondary max-w-130 font-light text-sm md:text-base leading-relaxed">
-                Short, honest reflections from professionals who optimized their career trajectories using the Partner execution engine.
+                Short, honest reflections from professionals who optimized their
+                career trajectories using the Partner execution engine.
               </p>
             </div>
           </motion.div>
@@ -283,7 +296,7 @@ const Landing = () => {
         className="relative py-32 px-4 bg-surface border-t border-white/5"
       >
         <div className="max-w-4xl mx-auto relative z-10">
-          <motion.div 
+          <motion.div
             className="text-center mb-20"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -302,7 +315,7 @@ const Landing = () => {
 
           <div className="space-y-6 relative">
             <div className="hidden md:block absolute left-15 top-10 bottom-10 w-0.5 bg-white/5 overflow-hidden">
-              <motion.div 
+              <motion.div
                 className="h-full w-full bg-gradient-to-b from-transparent via-primary-container to-transparent opacity-30"
                 animate={{ y: ["-100%", "100%"] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
@@ -314,22 +327,22 @@ const Landing = () => {
                 id: "01",
                 phase: "INIT",
                 title: "Input Context",
-                desc: "Provide the job description and upload your resume or profile details into the processing engine."
+                desc: "Provide the job description and upload your resume or profile details into the processing engine.",
               },
               {
                 id: "02",
                 phase: "PROCESS",
                 title: "AI Generation",
-                desc: "Our model analyzes the intersection of the requirements and your experience, running millions of parameters."
+                desc: "Our model analyzes the intersection of the requirements and your experience, running millions of parameters.",
               },
               {
                 id: "03",
                 phase: "OUTPUT",
                 title: "Review Strategy",
-                desc: "Access your personalized dashboard with questions, model answers, and a highly structured study plan."
-              }
+                desc: "Access your personalized dashboard with questions, model answers, and a highly structured study plan.",
+              },
             ].map((step, idx) => (
-              <motion.div 
+              <motion.div
                 key={step.id}
                 className="flex flex-col md:flex-row items-start md:items-center p-8 bg-surface-container-low/30 backdrop-blur-md border border-white/5 relative group mb-8 overflow-hidden"
                 initial={{ opacity: 0, x: -30 }}
@@ -340,12 +353,14 @@ const Landing = () => {
               >
                 <div className="absolute left-0 top-0 h-full w-0.5 bg-white/10 group-hover:bg-primary-container group-hover:shadow-[0_0_15px_rgba(0,240,255,0.6)] transition-all"></div>
                 <div className="shrink-0 w-24 flex items-center justify-center relative">
-                  <motion.div 
+                  <motion.div
                     className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center bg-black relative z-10"
                     whileHover={{ borderColor: "#7dd3fc" }}
                   >
-                    <span className="text-white font-mono text-lg">{step.id}</span>
-                    <motion.div 
+                    <span className="text-white font-mono text-lg">
+                      {step.id}
+                    </span>
+                    <motion.div
                       className="absolute inset-0 rounded-full border border-primary-container/50"
                       initial={{ scale: 1, opacity: 0 }}
                       whileHover={{ scale: 1.25, opacity: 0.5 }}
@@ -376,14 +391,14 @@ const Landing = () => {
         <div className="absolute inset-0 bg-noise opacity-30"></div>
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-primary-container/40 to-transparent"></div>
 
-        <motion.div 
+        <motion.div
           className="max-w-360 mx-auto relative z-10 text-center"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
         >
-          <motion.div 
+          <motion.div
             className="inline-flex items-center gap-3 px-4 py-2 border border-white/10 bg-white/5 backdrop-blur-md mb-12"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -405,7 +420,9 @@ const Landing = () => {
           </h2>
 
           <p className="max-w-165 mx-auto text-secondary text-base md:text-xl font-light leading-relaxed mb-16 px-4">
-            Join the elite circle of professionals who don't just "show up" to interviews—they command them. Initialize your preparation engine today.
+            Join the elite circle of professionals who don't just "show up" to
+            interviews—they command them. Initialize your preparation engine
+            today.
           </p>
 
           <div className="flex flex-col items-center gap-10">
@@ -413,31 +430,50 @@ const Landing = () => {
               to="/register"
               className="group relative flex items-center justify-center"
             >
-              <motion.div 
+              <motion.div
                 className="absolute inset-0 -m-1 border border-primary-container/20 group-hover:border-primary-container/60 transition-colors"
                 whileHover={{ scale: 1.05 }}
               ></motion.div>
 
-              <motion.div 
+              <motion.div
                 className="relative px-12 py-6 bg-primary-container text-black font-mono font-bold uppercase tracking-[0.25em] text-sm md:text-base flex items-center"
-                whileHover={{ backgroundColor: "#ffffff", boxShadow: "0 0 50px rgba(0,240,255,0.4)" }}
+                whileHover={{
+                  backgroundColor: "#ffffff",
+                  boxShadow: "0 0 50px rgba(0,240,255,0.4)",
+                }}
                 whileTap={{ scale: 0.98 }}
               >
                 <span className="flex items-center">
-                  <svg className="w-5 h-5 mr-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                    <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
+                  <svg
+                    className="w-5 h-5 mr-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                  >
+                    <path
+                      d="M5 12h14M12 5l7 7-7 7"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
                   </svg>
                   Initialize Account
                 </span>
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 className="absolute -left-4 top-1/2 -translate-y-1/2 w-1 h-8 bg-primary-container/40"
-                whileHover={{ height: "100%", backgroundColor: "rgba(125,211,252,0.8)" }}
+                whileHover={{
+                  height: "100%",
+                  backgroundColor: "rgba(125,211,252,0.8)",
+                }}
               ></motion.div>
-              <motion.div 
+              <motion.div
                 className="absolute -right-4 top-1/2 -translate-y-1/2 w-1 h-8 bg-primary-container/40"
-                whileHover={{ height: "100%", backgroundColor: "rgba(125,211,252,0.8)" }}
+                whileHover={{
+                  height: "100%",
+                  backgroundColor: "rgba(125,211,252,0.8)",
+                }}
               ></motion.div>
             </Link>
           </div>
